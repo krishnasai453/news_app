@@ -1,0 +1,21 @@
+{
+  "name": "news_app",
+  "version": "1.0.0",
+  "description": "shows all the top and latest news articles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "express-handlebars-paginate": "^1.0.3",
+    "express-session": "^1.14.2",
+    "handlebars": "^4.0.6"
+  },
+  "author": "raju",
+  "license": "ISC"
+}

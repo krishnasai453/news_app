@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>News App</title>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">News App</a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                  <li role="presentation" class="active">
+                      <a href="/"> News Dashboard</a>
+                  </li>      
+                  <li>
+                      <a href="/top_news">Top News</a>
+                  </li>
+                  <li>
+                      <a href="/latest_news">Latest News</a>
+                  </li>
+                  <li>
+                      <a href="/trending_news">Trending News</a>
+                  </li>
+                  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">World News <b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                          <li>
+                              <a href="/country/in">India-in </a>
+                          </li>
+                          <li>
+                              <a href="/country/us">USA-us </a>
+                          </li>
+                          <li>
+                              <a href="/country/gb">United Kingdom-gb </a>
+                          </li>
+                          <li>
+                              <a href="/country/au">Australia-au </a>
+                          </li>
+                          <li>
+                              <a href="/country/de">Germany-de </a>
+                          </li>
+                          <li>
+                              <a href="/country/it">Italy-it </a>
+                          </li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a href="contact.html">Subscribe</a>
+                  </li>
+                  <li>
+                      <a href="contact.html">Contact</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </nav>
+  <div class="container-fluid">
+    <div class="row content">
+      {{!-- various news --}}
+      <div class="col-sm-1 sidenav">
+        <h4>Various News</h4>
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="/business">Business</a></li>
+          <li><a href="/tech">Tech</a></li>
+          <li><a href="/sports">Sports</a></li>
+          <li><a href="/science">Science</a></li>
+          <li><a href="/fun">Entertainmnet</a></li>
+          <li><a href="/health">Health</a></li>
+          <li><a href="/photos">Photos</a></li>
+        </ul><br>
+      </div>
+      {{!-- body of articles --}}
+      <div class="col-sm-9">
+        	{{{body}}}
+      </div>
+      {{!-- ads --}}
+      <div class="col-sm-2 sidenav">
+        <div class="thumbnail">
+          <p>Upcoming Events:</p>
+          <img src="paris.jpg" alt="Paris" width="400" height="300">
+          <p><strong>Paris</strong></p>
+          <p>Fri. 27 November 2015</p>
+          <button class="btn btn-primary">Info</button>
+        </div>      
+        <div class="well">
+          <p>ADS</p>
+        </div>
+        <div class="well">
+          <p>ADS</p>
+        </div>
+          <div class="well">
+            <p>ADS</p>
+          </div>
+          <div class="well">
+            <p>ADS</p>
+          </div>
+        </div>
+    </div> <!-- /row -->
+    <footer class="footer">
+      <p>&copy; 2016 News APP.</p>
+    </footer>
+  </div> <!-- /container -->
+      <!-- jQuery -->
+  <script src="js/jquery.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.js"></script>
+</body>
+</html>
+
+
