@@ -1,19 +1,19 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">News Feed
-            <small>all news in the world</small>
+            <small>all news around the world</small>
         </h1>
     </div>
 </div>
 
 {{#each posts}}
-<div class="row post_row"  >    
+<div class="row post_row">
     <div class="col-md-12">
         <a href={{url}}>
-            <img class="img-thumbnail" src={{"urlToImage"}} alt="" style="width:400px;height:150px;">
+            <img class="img-thumbnail" src={{"urlToImage"}} alt="" style="width:300px;height:150px;">
         </a>
     <div class="col-md-6">
-        <h4>{{"title"}}</h4>
+        <h4><a href={{url}}>{{"title"}}</a></h4>
         <h4><small>News Source : the-hindu</small></h4>
         <h4><small>Author : {{"author"}} Published time: {{"publishedAt"}}</small></h4>
         <p>{{"description"}}</p>
@@ -22,5 +22,3 @@
           </div>
 </div>
 {{/each}}
-
-

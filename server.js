@@ -5,11 +5,30 @@ var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
 var flash = require('connect-flash');
 var session = require('express-session');
+var expValidator = require('express-validator');
+/*var mongo = require('mongodb');
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/news_feed_dev');
+var db = mongoose.connection;*/
+
 
 var app = express();
 
 
+// routes
+
 var routes = require('./routes/index');
+var contact = require('./routes/contact');
+var category = require('./routes/categories');
+var top = require('./routes/top');
+var latest = require('./routes/latest');
+var trending = require('./routes/trending');
+var subscribe = require('./routes/subscribe');
+var country = require('./routes/country');
+var post = require('./routes/post');
+var error = require('./routes/error');
+
+
 // view engine
 
 app.set('views', path.join(__dirname, 'views'));
@@ -35,6 +54,26 @@ app.use(session({
   resave: true
 }));
 
+// express validator
+
+// In this example, the formParam value is going to get morphed into form body format useful for printing.
+app.use(expValidator({
+  errorFormatter: function(param, msg, value) {
+      var namespace = param.split('.')
+      , root    = namespace.shift()
+      , formParam = root;
+
+    while(namespace.length) {
+      formParam += '[' + namespace.shift() + ']';
+    }
+    return {
+      param : formParam,
+      msg   : msg,
+      value : value
+    };
+  }
+}));
+
 
 // connect flash
 
@@ -51,7 +90,20 @@ app.use(function (req, res, next){
 });
 
 
+
+// api like stuff
 app.use('/', routes);
+app.use('/', top);
+app.use('/', latest);
+app.use('/', trending);
+app.use('/', contact);
+app.use('/', subscribe);
+app.use('/category', category);
+app.use('/country', country);
+app.use('/posts', post);
+app.use('/error', error);
+
+
 
 //set port
 

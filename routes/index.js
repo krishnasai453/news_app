@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
       "author": "Internet Desk",
       "title": "Panneerselvam, Deepa join hands at Jayalalithaa's memorial",
       "description": "Wherever I am, I will be handling the party affairs, says Saiskala addressing the media at Poes Garden",
-      "url": "http://www.thehindu.com/news/national/tamil-nadu/Live-Supreme-Court-ruling-on-Sasikalas-disproportionate-assets-case/article17298985.ece",
+      "url": "/posts/123456",
       "urlToImage": "http://www.thehindu.com/incoming/article17303413.ece/ALTERNATES/LANDSCAPE_615/DEEPA%20OPS%201%20jpg",
       "publishedAt": "2017-02-14T19:15:07Z"
     },

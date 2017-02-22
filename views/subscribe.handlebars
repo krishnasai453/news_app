@@ -1,0 +1,23 @@
+<h2 class="page-header">Subscribe for the News</h2>
+{{#if errors}}
+	{{#each errors}}
+		<div class = "alert alert-danger">{{msg}}</div>
+	{{/each}}
+{{/if}}
+<div class="sub_form col-lg-offset-3">
+	<div class="container text-center col-lg-8">
+		<h2>Want to subscribe for news? </h2>
+		<h4>Subscribe to our mailing list to receive an update when new articles arrive!</h4>
+		<div>
+			<form enctype="application/json" class="" role="form" action="/subscribe" method="post">
+				<div class="input-group input-group-sm">
+				<input type="email" name="email" class="form-control" placeholder="Email address...">
+				<input type="hidden" name="is_verified" value="false">
+				<span class="input-group-btn">
+				<button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default">Subscribe!</button>
+				</span>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
