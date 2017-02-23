@@ -34,11 +34,20 @@ module.exports.httpPost = function(url, body, callback){
 
 //GET Request:
 
-module.exports.httpGet = function(url, path){
-  httpRequest.get('http://example.com').then(function(response) {
-    // Get the response body
-          response.getBody();
-  });
+module.exports.httpGet = function(url, callback){
+  request('http://www.google.com', function (error, response, body) {
+    console.log('error:', error); // Print the error if one occurred
+    console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+    console.log('body:', body); // Print the HTML for the Google homepage.
+          if (!error && response.statusCode == 201) {
+              console.log("sucesss!!")
+              //console.log(data.data)
+              callback(error, body)
+          }
+          else {
+            callback(error, response)
+          }
+});
 };
 
 
